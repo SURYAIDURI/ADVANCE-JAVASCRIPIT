@@ -1,0 +1,84 @@
+THIS KEYWORD:
+"this" keyword  in global scope, local scope, inside a constructor, inside a class, and with Call , Apply and bind functions.
+--------------------------------------------------------------------------------------------------------------------------------------
+3. Design pattern problem - How will you design a Student class which stores the name , age , phone number, board marks of each student. Make a constructor to initialize the values. 
+function Student(n, a, m) {
+  var name = n;
+  var age = a;
+  var marks = m;
+  
+  var averageMarks = function() {
+    var sum = 0;
+    marks.forEach(function(m){
+      sum += m;
+    });
+    return sum/marks.length;    
+  }
+  this.printDetails = function() {
+    console.log('Name: ' + name + ' Age: ' + age + ' Average Marks: ' + averageMarks());
+  }
+}
+
+var student1 = new Student('Abhinav', 21, [70, 92, 84]);
+student1.printDetails();
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Write a function to check whether the student is egligible or not for college. If board marks > 40 -> egligible, if less than 40 -> not egligible.Write a function to check this.
+function validate(){
+            var marks=student(prompt("Enter marks"));
+            var ans="not eigible";
+            if(marks>40){
+                ans="eligible";
+            }
+            return(ans);
+        }
+        
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Create 5 students with different names and age.
+class Student{
+    constructor(firstName, lastName, age){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        console.log("New Student Created")
+    }
+}
+const Avery = new Student("Avery", "Ackles", 12);
+const Benny= new Student("Bailey", "Barnes", 12);
+const Carrie= new Student("Carter", "Peggy", 13);
+const Avery = new Student("Daniel", "Daggiel", 11);
+const Benny= new Student("Ellie", "Goulding", 26);
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<script>
+class Example {
+static staticVariable = 'student';
+	
+
+static staticMethod() {
+	return 'static method has been called.';
+	}
+}
+
+console.log(Example.staticVariable);
+
+console.log(Example.staticMethod());
+
+</static>
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+FAT ARROW FUNCTIONS
+
+
+Write the code which the youtuber writes by yourself and upload it here
+
+let sum = (a, b) => {
+    let result = a + b;
+    return result;
+}
+
+let result1 = sum(5,7);
+console.log(result1);
+
+
